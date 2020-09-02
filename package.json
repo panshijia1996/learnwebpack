@@ -4,7 +4,9 @@
   "description": "测试内容",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --open --contentBase src --hot",
+    "dev2": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,8 @@
   },
   "homepage": "https://github.com/panshijia1996/learnwebpack#readme",
   "dependencies": {
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "webpack": "^4.44.1"
   },
   "devDependencies": {
     "webpack-dev-server": "^3.11.0"
