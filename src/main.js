@@ -4,6 +4,20 @@
 // 浏览器无法直接识别ES6语法，需要通过webpack进行处理和打包
 import $ from 'jquery'
 
+// 使用import语法，导入css样式表
+import './css/index.css'
+// 注意：webpack默认只能打包处理js类型的文件，无法处理其他的非js类型的文件；
+// 如果要处理非js类型的文件，我们需要手动安装一些合适的第三方loader加载器；
+// 1、如果想要打包处理css文件，需要安装npm i style-loader css-loader -D
+// 2、打开webpack.config.js这个配置文件，在里面新增一个配置节点，叫做module，它是一个对象，
+// 在这个module对象上，有一个rules属性，这个rules属性是一个数组，这个数组中存放了所有第三方文件的匹配和处理规则。
+
+// 要打包处理less文件，需要引入less-loader（less-loader内部依赖less包）
+import './css/index.less'
+
+// 要打包处理scss文件，需要引入sass-loader(依赖于node-sass、sass和fibers包)
+import './css/index.scss'
+
 $(function(){
     $('li:odd').css('backgroundColor','blue')
     $('li:even').css('backgroundColor',function(){

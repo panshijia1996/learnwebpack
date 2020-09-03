@@ -6,7 +6,12 @@
     <title>Document</title>
     <!-- <script src="./main.js"></script> -->
     <!-- <script src="../dist/bundle.js"></script> -->
-    <script src="/bundle.js"></script>
+    <!-- 当使用了html-webpack-pligin之后，我们不再需要手动处理bundle.js的引用路径了，
+        因为这个插件创建了一个内存中的页面，会自动引入生成的内存中的bundle.js，所以这里的bundle.js可以注释掉 -->
+    <!-- <script src="/bundle.js"></script> -->
+
+    <!-- css文件会发起请求，所以不要这样导入 -->
+    <!-- <link rel="stylesheet" href="./css/index.css"></link> -->
 </head>
 <body>
     <ul>
